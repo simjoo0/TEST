@@ -1,0 +1,12 @@
+service: ngcp-addr
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  hello: # 테스트
+    handler: handler.hello
+    evnets:
+      -http:
+        path: hello/get
+        method: get
